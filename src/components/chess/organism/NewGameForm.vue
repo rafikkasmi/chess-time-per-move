@@ -9,12 +9,12 @@ const form = ref({
 });
 
 const validateTime = (value: number) => {
-  return value >= 10 && value <= 600; // Between 10 seconds and 10 minutes
+  return value >= 1 && value <= 600; // Between 10 seconds and 10 minutes
 };
 
 async function createGame() {
   if (!validateTime(form.value.timePerMove)) {
-    alert('Time per move must be between 10 seconds and 10 minutes');
+    alert('Time per move must be between 1 seconds and 10 minutes');
     return;
   }
   loading.value = true;
