@@ -39,7 +39,7 @@ async function createGame() {
       <BaseInput 
         type="number" 
         v-model="form.timePerMove" 
-        :min="10"
+        :min="1"
         :max="600"
         class="w-24 text-right"
       />
